@@ -1,11 +1,11 @@
 import React from 'react'
-import { NavLink , Link } from 'react-router-dom'
 
+//props = {id, name}
 
 function FolderItem(props){
   return (
-    <li>
-      
+    <li id={props.id}>
+      {props.name}
     </li>
   )
 }

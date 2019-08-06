@@ -1,5 +1,6 @@
 import React from 'react';
 import NoteItem from './NoteItem';
+import './notes.css';
 
 //props = {notes, folder}
 //notes = [{id, name, modified, folderId}, {...}...]

@@ -1,12 +1,23 @@
 import React from 'react'
-import FolderItem from './folder_components/FolderItem'
+import FolderItem from './FolderItem'
+import './folders.css';
 
+//props = {folders}
+//folders = [{id, name}, {...}...]
 
 function FolderList(props) {
   return(
+    <div id="folderList">
     <ul>
-      {FolderItem}
+      {props.folders.map(folder =>
+        <li key={folder.id}>
+          <FolderItem 
+          name={folder.name}
+          id={folder.id}
+          />
+        </li>)}
     </ul>
+    </div>
 
   )
 

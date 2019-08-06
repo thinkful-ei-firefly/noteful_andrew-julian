@@ -1,5 +1,4 @@
 import React from 'react';
-import './notes.css';
 
 //props = {name, modified, id, content}
 
