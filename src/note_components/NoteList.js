@@ -7,14 +7,21 @@ import './notes.css';
 //folder = [{name, id}, {...}...]
 
 function NoteList(props) {
-  let thisFoldersNotes = [];
+  console.log(props);
+  let thisFoldersNotes;
+  if(!props.match.params.id){
+    thisFoldersNotes = props.notes;
+  }else{
+    thisFoldersNotes = [];
     for (let i = 0; i < props.notes.length; i++)
     {
       let currentNote = props.notes[i];
-      if (currentNote.folderId === props.folder.id) {
+      if (currentNote.folderId === props.match.params.id) {
         thisFoldersNotes.push(currentNote);
       }
     }
+  }
+
   return (
     <div className="NoteList">
         <ul>

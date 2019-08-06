@@ -1,15 +1,17 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 //props = {id, name}
 
 function FolderItem(props){
-  let link = '/' + props.id;
+  let link = '/folder/' + props.id;
   return (
-    <a href={link}>
+    <Link to={link}>
+    
     <li id={props.id}>
       {props.name}
     </li>
-    </a>
+    </Link>
   )
 }
 
