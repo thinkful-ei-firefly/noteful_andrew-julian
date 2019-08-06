@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <NoteList notes={DummyStore.notes} />
+      <NoteList notes={DummyStore.notes} folder={DummyStore.folders[0].id}/>
     </div>
   );
 }
