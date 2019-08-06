@@ -1,13 +1,26 @@
 import React from 'react';
-import Header from './main_components/Header';
-import NoteItem from './note_components/NoteItem';
-import NoteDetailed from './note_components/NoteDetailed';
+import NoteItem from './NoteItem';
 
-function App() {
+//props = {notes}
+//notes = [{id, name, modified, folderId}, {...}...]
+
+function NoteList(props) {
   return (
     <div className="NoteList">
+        <ul>
+            {props.notes.map(note =>
+                <li key={note.id}>
+                    <NoteItem
+                        id={note.id}
+                        name={note.name}
+                        modified={note.modified}
+                    />
+                </li>
+                )}
+        </ul>
+        <button id="addNoteButton">Add Note</button>
     </div>
   );
 }
 
-export default App;
+export default NoteList;

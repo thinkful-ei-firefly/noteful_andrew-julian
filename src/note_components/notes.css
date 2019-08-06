@@ -1,0 +1,50 @@
+.noteItem {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 150px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.NoteList > ul {
+    list-style-type: none;
+}
+
+.itemInfo > button {
+    width: 100px;
+    height: 30px;
+    margin-right: 10px;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.noteTitle {
+    margin-left: 10px;
+    margin-right: auto;
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.itemInfo {
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: auto;
+    flex-direction: row;
+}
+
+.noteModified {
+    margin-left: 10px;
+}
+
+#addNoteButton {
+    margin-left: 7.5%;
+    font-size: 36px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
