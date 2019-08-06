@@ -17,7 +17,7 @@ class App extends Component {
         <Header />
         <div id="navigation">
         <FolderList folders={DummyStore.folders} />
-        <NoteList notes={DummyStore.notes} folder={DummyStore.folders[0].id} />
+        <NoteList notes={DummyStore.notes} folder={DummyStore.folders[0]} />
         </div></div>
     );
   }

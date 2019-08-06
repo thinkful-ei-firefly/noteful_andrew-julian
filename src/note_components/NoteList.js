@@ -4,13 +4,14 @@ import './notes.css';
 
 //props = {notes, folder}
 //notes = [{id, name, modified, folderId}, {...}...]
+//folder = [{name, id}, {...}...]
 
 function NoteList(props) {
   let thisFoldersNotes = [];
     for (let i = 0; i < props.notes.length; i++)
     {
       let currentNote = props.notes[i];
-      if (currentNote.folderId === props.folder) {
+      if (currentNote.folderId === props.folder.id) {
         thisFoldersNotes.push(currentNote);
       }
     }
@@ -23,6 +24,7 @@ function NoteList(props) {
                         id={note.id}
                         name={note.name}
                         modified={note.modified}
+                        folder={props.folder}
                     />
                 </li>
                 )}
